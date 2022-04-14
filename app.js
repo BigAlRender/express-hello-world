@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
+const port = process.env.HOST || '127.0.0.1';
 
 app.get("/", (req, res) => res.type('html').send(html));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, host, () => console.log(`Example app listening on port ${port}!`));
 
 
 const html = `
