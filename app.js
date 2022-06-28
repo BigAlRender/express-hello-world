@@ -5,6 +5,9 @@ const host = process.env.HOST || '127.0.0.1';
 
 app.get("/", (req, res) => res.type('html').send(html));
 
+app.get("/test1", (req, res) => res.send({"hello": "world!"}));
+app.get("/test2", (req, res) => res.json({"hello": "world!"}));
+
 app.listen(port, host, () => console.log(`Example app listening on port ${host}:${port}!`));
 
 
